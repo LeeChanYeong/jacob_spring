@@ -18,7 +18,7 @@ public class UsingContainerMain {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("services.xml");
 		UsingContainerMain main = context.getBean("usingContainerMain", UsingContainerMain.class);
-		main.listArticles();
+		main.getArticle();
 	}
 
 	public void listArticles() {
@@ -27,7 +27,7 @@ public class UsingContainerMain {
 	}
 
 	public void getArticle() {
-		Article article = articleDao.getArticle("3");
+		Article article = articleDao.getArticle("1");
 		System.out.println(article);
 	}
 
