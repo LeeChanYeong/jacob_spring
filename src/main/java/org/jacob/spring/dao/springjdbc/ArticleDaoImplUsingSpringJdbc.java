@@ -2,8 +2,6 @@ package org.jacob.spring.dao.springjdbc;
 
 import java.util.List;
 
-import org.jacob.spring.dao.Article;
-import org.jacob.spring.dao.ArticleDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

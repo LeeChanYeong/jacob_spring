@@ -1,24 +1,23 @@
-package org.jacob.spring;
+package org.jacob.spring.dao.springjdbc;
 
 import java.util.List;
 
-import org.jacob.spring.dao.Article;
-import org.jacob.spring.dao.ArticleDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UsingContainerMain {
+public class SpringJdbcMain {
 
 	@Autowired
 	ArticleDao articleDao;
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext("services.xml");
-		UsingContainerMain main = context.getBean("usingContainerMain", UsingContainerMain.class);
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-jdbc.xml");
+		SpringJdbcMain main = context.getBean("springJdbcMain", SpringJdbcMain.class);
 		main.getArticle();
+		context.close();
 	}
 
 	public void listArticles() {

@@ -1,4 +1,4 @@
-package org.jacob.spring.dao;
+package org.jacob.spring.dao.springjdbc;
 
 public class Article {
     String articleId;
