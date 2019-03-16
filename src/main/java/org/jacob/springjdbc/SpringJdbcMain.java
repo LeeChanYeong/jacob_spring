@@ -1,4 +1,4 @@
-package org.jacob.spring.dao.springjdbc;
+package org.jacob.springjdbc;
 
 import java.util.List;
 
@@ -14,9 +14,11 @@ public class SpringJdbcMain {
 	ArticleDao articleDao;
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("spring-jdbc.xml");
-		SpringJdbcMain main = context.getBean("springJdbcMain", SpringJdbcMain.class);
-		main.getArticle();
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
+				"spring-jdbc.xml");
+		SpringJdbcMain main = context.getBean("springJdbcMain",
+				SpringJdbcMain.class);
+		main.listArticles();
 		context.close();
 	}
 
@@ -26,7 +28,7 @@ public class SpringJdbcMain {
 	}
 
 	public void getArticle() {
-		Article article = articleDao.getArticle("1");
+		Article article = articleDao.getArticle("3");
 		System.out.println(article);
 	}
 
@@ -36,7 +38,10 @@ public class SpringJdbcMain {
 		article.setContent("This is content");
 		article.setUserId("1");
 		article.setName("조원석");
-		articleDao.addArticle(article);
+		if (articleDao.addArticle(article) > 0)
+			System.out.println("글을 추가했습니다.");
+		else
+			System.out.println("글을 추가하지 못했습니다.");
 	}
 
 	public void updateArticle() {
@@ -44,10 +49,16 @@ public class SpringJdbcMain {
 		article.setArticleId("7");
 		article.setTitle("This is modified title.");
 		article.setContent("This is modified content");
-		articleDao.updateArticle(article);
+		if (articleDao.updateArticle(article) > 0)
+			System.out.println("글을 수정했습니다.");
+		else
+			System.out.println("글을 수정하지 못했습니다.");
 	}
 
 	public void deleteArticle() {
-		articleDao.deleteArticle("8");
+		if (articleDao.deleteArticle("8") > 0)
+			System.out.println("글을 삭제했습니다.");
+		else
+			System.out.println("글을 삭제하지 못했습니다.");
 	}
 }
