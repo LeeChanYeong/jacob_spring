@@ -22,6 +22,11 @@ dependencies {
 	implementation 'org.apache.logging.log4j:log4j-core:2.+'
 }
 
+task docs (dependsOn: javadoc, type: Copy) {
+	from 'build/docs/javadoc'
+	into 'docs'
+}
+
 task runNormalMain(type: JavaExec) {
 	main = 'org.jacob.book.chap02.NormalMain'
 	classpath =  sourceSets.main.runtimeClasspath
