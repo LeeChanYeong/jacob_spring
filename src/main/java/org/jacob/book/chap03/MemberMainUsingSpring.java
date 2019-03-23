@@ -13,7 +13,7 @@ public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"chap03-1.xml");
+				"chap03.xml");
 		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
 

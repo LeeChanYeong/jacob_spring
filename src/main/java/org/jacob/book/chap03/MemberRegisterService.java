@@ -15,7 +15,7 @@ public class MemberRegisterService {
 
 	static Logger logger = LogManager.getLogger();
 
-	// default constructor
+	// memberDao를 초기화하는 컨스트럭터
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
