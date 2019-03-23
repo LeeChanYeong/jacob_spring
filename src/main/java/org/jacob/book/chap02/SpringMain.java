@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * p.46 리스트 2.5의 Main 클래스를 수정
+ * p.46 [리스트 2.5]와 p.50 [리스트 2.6] Main 클래스 수정  
  * 
  * @author Jacob
  */
