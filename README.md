@@ -2,7 +2,7 @@
 
 Spring Core 예제와 Spring JDBC를 사용하는 자바 애플리케이션.
 
-![API Documentation](https://w0nse0k.github.io/spring_study/)
+[API Documentation](https://w0nse0k.github.io/spring_study/)
 
 ## 교재
 
