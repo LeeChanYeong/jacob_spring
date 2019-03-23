@@ -1,4 +1,4 @@
-package spring5.chap03;
+package org.jacob.book.chap03;
 
 /**
  * 회원을 등록하는 서비스

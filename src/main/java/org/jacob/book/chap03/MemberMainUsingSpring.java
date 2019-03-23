@@ -1,4 +1,4 @@
-package spring5.chap03;
+package org.jacob.book.chap03;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

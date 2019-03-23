@@ -1,4 +1,4 @@
-package org.jacob.springjdbc;
+package org.jacob.jdbc.spring;
 
 /**
  * 도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다.

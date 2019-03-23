@@ -7,5 +7,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:component-scan base-package="spring5.chap03" />
+	<context:component-scan base-package="org.jacob.book.chap03" />
 </beans>

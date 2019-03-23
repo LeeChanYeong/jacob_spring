@@ -1,4 +1,4 @@
-package org.jacob.springjdbc;
+package org.jacob.jdbc.spring;
 
 import java.util.List;
 

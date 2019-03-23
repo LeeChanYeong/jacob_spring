@@ -1,4 +1,4 @@
-package spring5.chap03;
+package org.jacob.book.chap03;
 
 /**
  * 회원정보 도메인 오브젝트. 회원 테이블과 매핑한다.
