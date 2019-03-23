@@ -1,5 +1,11 @@
 package org.jacob.book.chap03;
 
+/**
+ * MemberRegisterService를 테스트한다.<br>
+ * new를 사용해서 직접 인스턴스를 생성한다.
+ * 
+ * @author Jacob
+ */
 public class MemberMain {
 
 	public static void main(String[] args) {

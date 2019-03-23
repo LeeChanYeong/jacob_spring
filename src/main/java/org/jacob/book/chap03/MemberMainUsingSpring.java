@@ -3,6 +3,12 @@ package org.jacob.book.chap03;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * MemberRegisterService를 테스트한다.<br>
+ * Spring ApplicationContext로 빈을 생성한다.
+ * 
+ * @author Jacob
+ */
 public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
