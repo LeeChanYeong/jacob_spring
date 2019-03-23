@@ -15,13 +15,20 @@ public class MemberRegisterService {
 
 	static Logger logger = LogManager.getLogger();
 
-	// memberDao를 초기화하는 컨스트럭터
+	/**
+	 * memberDao를 초기화하는 컨스트럭터
+	 */
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
 
-	// 회원 등록
-	public void regist(RegisterRequest req) {
+	/**
+	 * 회원 등록
+	 * 
+	 * @param req 사용자가 입력한 회원 정보
+	 * @throws DuplicateMemberException 이메일이 중복될 경우에 발생
+	 */
+	public void regist(RegisterRequest req) throws DuplicateMemberException {
 		logger.debug(req);
 		Member member = memberDao.selectByEmail(req.getEmail());
 

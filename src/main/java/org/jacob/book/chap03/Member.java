@@ -13,11 +13,19 @@ public class Member {
 	String name; // 이름
 	String registerDate; // 등록일시
 
-	// default constructor
+	/**
+	 * Default Constructor
+	 */
 	public Member() {
 	}
 
-	// email, password, name 으로 초기화하는 컨스트럭터
+	/**
+	 * email, password, name 으로 초기화하는 컨스트럭터
+	 * 
+	 * @param email 이메일
+	 * @param password 비밀번호
+	 * @param name 이름
+	 */
 	public Member(String email, String password, String name) {
 		this.email = email;
 		this.password = password;

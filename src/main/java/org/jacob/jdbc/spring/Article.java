@@ -1,7 +1,8 @@
 package org.jacob.jdbc.spring;
 
 /**
- * 도메인 오브젝트. 데이터베이스의 article 테이블에 매핑한다.
+ * Article 도메인 오브젝트.<br>
+ * 데이터베이스의 article 테이블에 매핑한다.
  * 
  * @author Jacob
  */
@@ -75,9 +76,6 @@ public class Article {
 		this.cdate = cdate;
 	}
 
-	/**
-	 * 인스턴스의 멤버를 출력하는 메서드
-	 */
 	@Override
 	public String toString() {
 		return "Article [articleId=" + articleId + ", title=" + title

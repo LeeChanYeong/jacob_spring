@@ -2,7 +2,7 @@ package org.jacob.book.chap03;
 
 /**
  * p.63 [리스트 3.7] RegisterRequest 수정<br>
- * 회원가입할 때 사용자가 입력해서 서버로 보내는 정보
+ * 회원가입할 때 사용자가 입력해서 서버로 보내는 회원 정보
  * 
  * @author Jacob
  */

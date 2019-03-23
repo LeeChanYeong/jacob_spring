@@ -7,6 +7,11 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
+/**
+ * Spring JDBC를 사용해서 ArticleDao를 구현
+ * 
+ * @author Jacob
+ */
 @Repository("articleDao")
 public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	/**
@@ -38,7 +43,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	JdbcTemplate jdbcTemplate;
 
 	/**
-	 * 게시글 목록
+	 * 글 목록
 	 */
 	@Override
 	public List<Article> listArticles() {
@@ -47,7 +52,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	}
 
 	/**
-	 * 게시글 상세
+	 * 글 상세
 	 */
 	@Override
 	public Article getArticle(String articleId) {
@@ -56,7 +61,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	}
 
 	/**
-	 * 게시글 등록
+	 * 글 등록
 	 */
 	@Override
 	public int addArticle(Article article) {
@@ -65,7 +70,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	}
 
 	/**
-	 * 게시글 수정
+	 * 글 수정
 	 */
 	@Override
 	public int updateArticle(Article article) {
@@ -74,7 +79,7 @@ public class ArticleDaoImplUsingSpringJdbc implements ArticleDao {
 	}
 
 	/**
-	 * 게시글 삭제
+	 * 글 삭제
 	 */
 	@Override
 	public int deleteArticle(String articleId) {

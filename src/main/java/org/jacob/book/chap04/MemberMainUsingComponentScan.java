@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * MemberRegisterService를 테스트한다.<br>
- * Spring ApplicationContext로 빈을 생성한다.
+ * component scan으로 빈을 생성한다.
  * 
  * @author Jacob
  */

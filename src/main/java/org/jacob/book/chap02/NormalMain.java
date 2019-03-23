@@ -1,7 +1,7 @@
 package org.jacob.book.chap02;
 
 /**
- * Greeter 인스턴스를 사용하는 단순한 예
+ * Greeter 인스턴스를 직접 생성하는 Main
  *
  * @author Jacob
  */
