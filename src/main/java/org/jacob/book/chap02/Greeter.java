@@ -5,7 +5,6 @@ package org.jacob.book.chap02;
  * 
  * @author Jacob
  */
-
 public class Greeter {
 
 	public Greeter() {
