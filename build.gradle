@@ -21,3 +21,28 @@ dependencies {
 	implementation 'org.apache.logging.log4j:log4j-api:2.11.2'
 	implementation 'org.apache.logging.log4j:log4j-core:2.11.2'
 }
+
+task runNormalMain(type: JavaExec) {
+	main = 'org.jacob.book.chap02.NormalMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runSpringMain(type: JavaExec) {
+	main = 'org.jacob.book.chap02.SpringMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runMemberMain(type: JavaExec) {
+	main = 'org.jacob.book.chap03.MemberMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runMemberMainUsingSpring(type: JavaExec) {
+	main = 'org.jacob.book.chap03.MemberMainUsingSpring'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runMemberMainUsingComponentScan(type: JavaExec) {
+	main = 'org.jacob.book.chap04.MemberMainUsingComponentScan'
+	classpath =  sourceSets.main.runtimeClasspath
+}
