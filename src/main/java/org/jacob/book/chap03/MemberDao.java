@@ -1,28 +1,26 @@
 package org.jacob.book.chap03;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
+ * p.62 [리스트 3.5] MemberDao 수정<br>
  * 회원 테이블을 조작하는 Data Access Object
  * 
  * @author Jacob
  */
 public class MemberDao {
-	/**
-	 * 회원 테이블에서 이메일로 회원정보를 가져온다.
-	 * 
-	 * @param email 이메일
-	 * @return 회원정보
-	 */
+
+	// 회원정보 맵 (회원 테이블)
+	Map<String, Member> map = new HashMap<>();
+
+	// 이메일로 회원 정보 가져옴
 	public Member selectByEmail(String email) {
-		// TODO: 데이터베이스에서 이메일로 회원정보를 가져온다.
-		return null;
+		return map.get(email);
 	}
 
-	/**
-	 * 회원 테이블에 회원정보를 저장한다.
-	 * 
-	 * @param member 회원정보
-	 */
+	// 회원정보 저장
 	public void insert(Member member) {
-		// TODO: 데이터베이스에 회원정보를 저장한다.
+		map.put(member.getEmail(), member);
 	}
 }

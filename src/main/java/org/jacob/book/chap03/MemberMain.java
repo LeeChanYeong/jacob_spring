@@ -3,9 +3,16 @@ package org.jacob.book.chap03;
 public class MemberMain {
 
 	public static void main(String[] args) {
-		MemberRegisterService service = new MemberRegisterService();
-		Member member = new Member();
-		member.setEmail("jacob@irafe.com");
-		service.regist(member);
+		MemberDao memberDao = new MemberDao();
+		MemberRegisterService regService = new MemberRegisterService(memberDao);
+
+		// registerRequest 초기화
+		RegisterRequest req = new RegisterRequest();
+		req.setEmail("jacob@irafe.com");
+		req.setPassword("xxxx");
+		req.setName("Jacob");
+
+		// 회원 등록
+		regService.regist(req);
 	}
 }

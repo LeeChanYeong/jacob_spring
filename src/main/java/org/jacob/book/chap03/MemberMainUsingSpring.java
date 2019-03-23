@@ -1,18 +1,23 @@
 package org.jacob.book.chap03;
 
-import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
-				"chap03.xml");
-		MemberRegisterService service = ctx.getBean("memberRegisterService",
+		ApplicationContext ctx = new ClassPathXmlApplicationContext(
+				"chap03-1.xml");
+		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
-		Member member = new Member();
-		member.setEmail("jacob@irafe.com");
-		service.regist(member);
-		ctx.close();
+
+		// registerRequest 초기화
+		RegisterRequest req = new RegisterRequest();
+		req.setEmail("jacob@irafe.com");
+		req.setPassword("xxxx");
+		req.setName("Jacob");
+
+		// 회원 등록
+		regService.regist(req);
 	}
 }
