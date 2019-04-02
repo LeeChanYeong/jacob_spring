@@ -52,7 +52,17 @@ task runMemberMainUsingComponentScan(type: JavaExec) {
 	classpath =  sourceSets.main.runtimeClasspath
 }
 
-task runSpringJdbcMain (type: JavaExec) {
-	main = 'org.jacob.jdbc.spring.SpringJdbcMain'
+task runChap08MemberMain(type: JavaExec) {
+	main = 'org.jacob.book.chap08.MemberMain'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runChap08MemberMainUsingSpring(type: JavaExec) {
+	main = 'org.jacob.book.chap08.MemberMainUsingSpring'
+	classpath =  sourceSets.main.runtimeClasspath
+}
+
+task runArticleMainUsingSpring (type: JavaExec) {
+	main = 'org.jacob.jdbc.spring.ArticleMainUsingSpring'
 	classpath =  sourceSets.main.runtimeClasspath
 }
