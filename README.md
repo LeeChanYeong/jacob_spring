@@ -1,4 +1,4 @@
-# Spring Study        
+# Jacob Spring        
 
 교재의 Chapter 2,3,4,8 예제
 
