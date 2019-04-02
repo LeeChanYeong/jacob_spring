@@ -10,12 +10,12 @@
 	<context:component-scan
 		base-package="org.jacob.jdbc.spring" />
 
-	<!-- services -->
+	<context:property-placeholder
+		location="classpath:db.properties" />
 
+	<!-- dataSource를 초기화한다. -->
 	<bean id="dataSource" class="org.mariadb.jdbc.MariaDbDataSource">
-		<property name="url" value="jdbc:mariadb://localhost:3306/jacobdb" />
-		<property name="user" value="jacob" />
-		<property name="password" value="xxxxxxxx" />
+		<property name="url" value="${db.url}" />
 	</bean>
 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">

@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @author Jacob
  */
-public class SpringJdbcMain {
+public class ArticleMainUsingSpring {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
