@@ -1,6 +1,6 @@
 package org.jacob.jdbc.spring;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,10 +11,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringJdbcMain {
 
 	public static void main(String[] args) {
-		ApplicationContext context = new ClassPathXmlApplicationContext(
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(
 				"spring-jdbc.xml");
 		ArticleService articleService = context.getBean("articleService",
 				ArticleService.class);
+		context.close();
+
 		articleService.listArticles();
 	}
 
