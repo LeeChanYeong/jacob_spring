@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"org.jacob.book.chap02"},{"l":"org.jacob.book.chap03"},{"l":"org.jacob.book.chap04"},{"l":"org.jacob.jdbc.spring"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"org.jacob.book.chap02"},{"l":"org.jacob.book.chap03"},{"l":"org.jacob.book.chap04"},{"l":"org.jacob.book.chap08"},{"l":"org.jacob.book.example"},{"l":"org.jacob.jdbc.spring"}]
