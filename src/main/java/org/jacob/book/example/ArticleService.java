@@ -4,8 +4,7 @@ public class ArticleService {
 
 	MemberDao memberDao;
 
-	// property memberDao setter
-	// setter method for DI
+	// memberDao setter for injection
 	public void setMemberDao(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
