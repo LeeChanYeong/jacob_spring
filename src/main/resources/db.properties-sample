@@ -1,0 +1,1 @@
+db.url=jdbc:mariadb://<host>:<port>/<schema>?user=<username>&password=<password>
