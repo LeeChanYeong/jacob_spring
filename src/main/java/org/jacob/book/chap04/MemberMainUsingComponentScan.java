@@ -17,7 +17,6 @@ public class MemberMainUsingComponentScan {
 				"chap04.xml");
 		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
-		ctx.close();
 		
 		// registerRequest 초기화
 		RegisterRequest req = new RegisterRequest();
@@ -27,5 +26,6 @@ public class MemberMainUsingComponentScan {
 
 		// 회원 등록
 		regService.regist(req);
+		ctx.close();
 	}
 }
