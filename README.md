@@ -10,7 +10,7 @@
 데이터베이스 접속 보안을 위해 다음과 같이 설정한다.
 
 1. .gitignore에 db.properties 를 추가해서 db.properties 파일을 github에 올리지 않도록 한다.
-2. src/main/resources 디렉터리의 db.properties-sample을 db.properties로 복사한다.
+2. src/main/resources/db.properties-sample을 db.properties로 복사한다.
 3. db.properties 파일에서 <host>, <port>, <schema>, <username>, <password>를 적절한 값으로 바꾼다.
 
 ## 교재
