@@ -2,9 +2,9 @@ package org.jacob.book.example;
 
 public class PaymentService {
 	MemberDao memberDao;
-	
-	// property memberDao setter
-	public void setMemberDao(MemberDao memberDao) {
+
+	// constructor for memberDao injection
+	public PaymentService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
 

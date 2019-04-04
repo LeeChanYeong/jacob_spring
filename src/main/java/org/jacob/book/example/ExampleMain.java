@@ -1,17 +1,18 @@
 package org.jacob.book.example;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 public class ExampleMain {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("example.xml");
-		ArticleService articleService = ctx.getBean("articleService", ArticleService.class);
-		PaymentService paymentService = ctx.getBean("paymentService", PaymentService.class);
-		
+		MemberDao memberDao = new MemberDao();
+
+		// Default constructor로 생성 후 memberDao를 넣어줌
+		ArticleService articleService = new ArticleService();
+		articleService.setMemberDao(memberDao);
+
+		// memberDao를 넣어주는 constructor 사용
+		PaymentService paymentService = new PaymentService(memberDao);
+
 		articleService.addArticle();
 		paymentService.pay();
 	}
-
 }
